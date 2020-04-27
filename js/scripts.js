@@ -33,6 +33,31 @@ $(document).ready(function() {
   var number1 = parseInt($("#add1").val());
   var number2 = parseInt($("#add2").val());
   var result = add(number1, number2);
-  $("#output").text(result);
+  $("#outputadd").text(result);
+  });
+
+
+  $("form#subtract").submit(function(even) {
+    event.preventDefault();
+    var number1 = parseInt($("#subtract1").val());
+    var number2 = parseInt($("#subtract2").val());
+    var resultsub = subtract(number1, number2);
+    $("#outputsubtract").text(resultsub);
+    });
+
+  $("form#multiply").submit(function(even) {
+    event.preventDefault();
+    var number1 = parseInt($("#multiply1").val());
+    var number2 = parseInt($("#multiply2").val());
+    var resultmult = multiply(number1, number2);
+    $("#outputmultiply").text(resultmult);
+  });
+
+  $("form#divide").submit(function(even) {
+    event.preventDefault();
+    var number1 = parseInt($("#divide1").val());
+    var number2 = parseInt($("#divide2").val());
+    var resultdiv = divide(number1, number2);
+    $("outputdiv").text(resultdiv);
   });
 });
